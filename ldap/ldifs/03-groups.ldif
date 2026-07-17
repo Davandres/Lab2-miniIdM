@@ -1,0 +1,24 @@
+dn: cn=profesores,ou=profesores,ou=groups,dc=fis,dc=epn,dc=ec
+objectClass: posixGroup
+cn: profesores
+gidNumber: 5000
+
+dn: cn=empleados,ou=empleados,ou=groups,dc=fis,dc=epn,dc=ec
+objectClass: posixGroup
+cn: empleados
+gidNumber: 5001
+
+dn: cn=software,ou=software,ou=estudiantes,ou=groups,dc=fis,dc=epn,dc=ec
+objectClass: posixGroup
+cn: software
+gidNumber: 5010
+
+dn: cn=computacion,ou=computacion,ou=estudiantes,ou=groups,dc=fis,dc=epn,dc=ec
+objectClass: posixGroup
+cn: computacion
+gidNumber: 5011
+
+dn: cn=datos,ou=datos,ou=estudiantes,ou=groups,dc=fis,dc=epn,dc=ec
+objectClass: posixGroup
+cn: datos
+gidNumber: 5012

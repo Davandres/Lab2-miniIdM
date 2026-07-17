@@ -1,0 +1,27 @@
+# Solo en ldap2 (replica). Aplicar con:
+#   sudo ldapmodify -Y EXTERNAL -H ldapi:/// -f syncrepl-consumer.ldif.example
+# Reemplazar TU_CONTRASENA_DE_ADMIN con la contrasena real (texto plano) del
+# cn=admin. NO cargar el arbol de datos manualmente en ldap2 antes de esto:
+# syncrepl lo trae automaticamente desde ldap1.
+
+dn: olcDatabase={2}mdb,cn=config
+changetype: modify
+add: olcSyncrepl
+olcSyncrepl: rid=1
+  provider=ldaps://ldap1.fis.epn.ec
+  bindmethod=simple
+  binddn="cn=admin,dc=fis,dc=epn,dc=ec"
+  credentials=TU_CONTRASENA_DE_ADMIN
+  searchbase="dc=fis,dc=epn,dc=ec"
+  scope=sub
+  schemachecking=on
+  type=refreshAndPersist
+  retry="5 5 300 3"
+  starttls=no
+  tls_reqcert=demand
+  tls_cacert=/etc/openldap/certs/ca.crt
+
+dn: olcDatabase={2}mdb,cn=config
+changetype: modify
+add: olcUpdateRef
+olcUpdateRef: ldaps://ldap1.fis.epn.ec

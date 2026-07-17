@@ -1,0 +1,45 @@
+# Plantilla de usuarios de ejemplo, uno por cada rama del arbol.
+# Reemplazar {SSHA}CAMBIAR_POR_HASH con un hash real generado por:
+#   slappasswd -s "tu_password"
+
+dn: uid=jperez,ou=profesores,ou=people,dc=fis,dc=epn,dc=ec
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: jperez
+cn: Juan Perez
+sn: Perez
+mail: jperez@fis.epn.edu.ec
+uidNumber: 10001
+gidNumber: 5000
+homeDirectory: /home/jperez
+loginShell: /bin/bash
+userPassword: {SSHA}CAMBIAR_POR_HASH
+
+dn: uid=malvan,ou=empleados,ou=people,dc=fis,dc=epn,dc=ec
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: malvan
+cn: M Alvan
+sn: Alvan
+mail: malvan@fis.epn.edu.ec
+uidNumber: 10002
+gidNumber: 5001
+homeDirectory: /home/malvan
+loginShell: /bin/bash
+userPassword: {SSHA}CAMBIAR_POR_HASH
+
+dn: uid=dnoboa,ou=software,ou=estudiantes,ou=people,dc=fis,dc=epn,dc=ec
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: dnoboa
+cn: D Noboa
+sn: Noboa
+mail: dnoboa@fis.epn.edu.ec
+uidNumber: 10003
+gidNumber: 5010
+homeDirectory: /home/dnoboa
+loginShell: /bin/bash
+userPassword: {SSHA}CAMBIAR_POR_HASH

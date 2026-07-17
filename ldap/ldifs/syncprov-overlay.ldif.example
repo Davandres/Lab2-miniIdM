@@ -1,0 +1,10 @@
+# Solo en ldap1 (master), despues de cargar el modulo. Aplicar con:
+#   sudo ldapmodify -Y EXTERNAL -H ldapi:/// -f syncprov-overlay.ldif.example
+
+dn: olcOverlay=syncprov,olcDatabase={2}mdb,cn=config
+changetype: add
+objectClass: olcOverlayConfig
+objectClass: olcSyncProvConfig
+olcOverlay: syncprov
+olcSpCheckpoint: 100 10
+olcSpSessionlog: 100

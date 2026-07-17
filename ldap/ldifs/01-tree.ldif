@@ -1,0 +1,18 @@
+dn: dc=fis,dc=epn,dc=ec
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: FIS EPN
+dc: fis
+
+dn: cn=admin,dc=fis,dc=epn,dc=ec
+objectClass: organizationalRole
+cn: admin
+
+dn: ou=people,dc=fis,dc=epn,dc=ec
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=fis,dc=epn,dc=ec
+objectClass: organizationalUnit
+ou: groups

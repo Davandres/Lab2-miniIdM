@@ -1,0 +1,17 @@
+# Aplicar con: sudo ldapmodify -Y EXTERNAL -H ldapi:/// -f tls-config.ldif.example
+# Ajustar rutas segun el nodo (ldap1 o ldap2)
+
+dn: cn=config
+changetype: modify
+replace: olcTLSCertificateFile
+olcTLSCertificateFile: /etc/openldap/certs/ldap1.crt
+
+dn: cn=config
+changetype: modify
+replace: olcTLSCertificateKeyFile
+olcTLSCertificateKeyFile: /etc/openldap/certs/ldap1.key
+
+dn: cn=config
+changetype: modify
+replace: olcTLSCACertificateFile
+olcTLSCACertificateFile: /etc/openldap/certs/ca.crt

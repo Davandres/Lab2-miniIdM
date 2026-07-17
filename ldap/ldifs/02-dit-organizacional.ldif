@@ -1,0 +1,47 @@
+dn: ou=profesores,ou=people,dc=fis,dc=epn,dc=ec
+objectClass: organizationalUnit
+ou: profesores
+
+dn: ou=empleados,ou=people,dc=fis,dc=epn,dc=ec
+objectClass: organizationalUnit
+ou: empleados
+
+dn: ou=estudiantes,ou=people,dc=fis,dc=epn,dc=ec
+objectClass: organizationalUnit
+ou: estudiantes
+
+dn: ou=software,ou=estudiantes,ou=people,dc=fis,dc=epn,dc=ec
+objectClass: organizationalUnit
+ou: software
+
+dn: ou=computacion,ou=estudiantes,ou=people,dc=fis,dc=epn,dc=ec
+objectClass: organizationalUnit
+ou: computacion
+
+dn: ou=datos,ou=estudiantes,ou=people,dc=fis,dc=epn,dc=ec
+objectClass: organizationalUnit
+ou: datos
+
+dn: ou=profesores,ou=groups,dc=fis,dc=epn,dc=ec
+objectClass: organizationalUnit
+ou: profesores
+
+dn: ou=empleados,ou=groups,dc=fis,dc=epn,dc=ec
+objectClass: organizationalUnit
+ou: empleados
+
+dn: ou=estudiantes,ou=groups,dc=fis,dc=epn,dc=ec
+objectClass: organizationalUnit
+ou: estudiantes
+
+dn: ou=software,ou=estudiantes,ou=groups,dc=fis,dc=epn,dc=ec
+objectClass: organizationalUnit
+ou: software
+
+dn: ou=computacion,ou=estudiantes,ou=groups,dc=fis,dc=epn,dc=ec
+objectClass: organizationalUnit
+ou: computacion
+
+dn: ou=datos,ou=estudiantes,ou=groups,dc=fis,dc=epn,dc=ec
+objectClass: organizationalUnit
+ou: datos

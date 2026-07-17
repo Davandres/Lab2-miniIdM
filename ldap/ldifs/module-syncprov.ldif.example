@@ -1,0 +1,10 @@
+# Solo en ldap1 (master). Aplicar con:
+#   sudo ldapadd -Y EXTERNAL -H ldapi:/// -f module-syncprov.ldif.example
+# NOTA: en Fedora, cn=module{0},cn=config normalmente NO existe por defecto,
+# hay que crearlo (ldapadd, no ldapmodify).
+
+dn: cn=module{0},cn=config
+objectClass: olcModuleList
+cn: module{0}
+olcModulePath: /usr/lib64/openldap
+olcModuleLoad: syncprov.la
