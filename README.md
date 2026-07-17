@@ -189,8 +189,7 @@ Cada target asume acceso SSH configurado (llaves, sin password interactivo)
 hacia las VMs correspondientes; ajustar `SSH_USER` y los hostnames en el
 `Makefile` según el inventario real.
 
-#Declaración uso de la IA
-Realizado de manera individual. Ayuda externa utilizada: asistencia de IA
-(Claude) para depuración de configuración y estructuración de scripts y
+## Declaración uso de la IA
+Asistencia de IA (Claude) para depuración de configuración y estructuración de scripts y
 documentación; todos los comandos fueron ejecutados y verificados
 manualmente sobre la infraestructura real.
