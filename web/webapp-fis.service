@@ -1,0 +1,15 @@
+# Copiar a /etc/systemd/system/webapp-fis.service
+# Ajustar User=, WorkingDirectory= y ExecStart= a la ruta real.
+
+[Unit]
+Description=FIS Flask backend
+After=network.target
+
+[Service]
+User=web
+WorkingDirectory=/home/web/webapp
+ExecStart=/usr/bin/python3 /home/web/webapp/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
